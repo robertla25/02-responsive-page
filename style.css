@@ -7,10 +7,19 @@ body {
   font-size: 18px;
 }
 
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
 header {
   background: #333;
   color: #fff;
-  padding: 16px;
+  padding: 16px 0;
   text-align: center;
   font-family: 'Exo 2', sans-serif;
 }
@@ -22,6 +31,7 @@ h1, h2, h3 {
 h1 {
   margin: 0;
   font-size: 32px;
+  text-align: left;
 }
 
 main {
@@ -128,9 +138,62 @@ a:hover {
   height: auto;
 }
 
-@media (max-width: 600px) {
+nav {
+  margin-top: 12px;
+}
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background-color: #444;
+}
+
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 8px;
+  }
+
+  nav {
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .navbar li {
+    display: block;
+  }
+
   h1 {
     font-size: 24px;
+    text-align: left;
+    width: 100%;
   }
 
   h2 {
